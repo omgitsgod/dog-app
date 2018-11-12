@@ -1,0 +1,14 @@
+<%= form_for @event do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :location %>
+<%= f.number_field :location %> <br>
+<%= f.label :date %>
+<%= f.date_select :date %> <br>
+<%= f.label :address %>
+<%= f.text_field :address %> <br>
+<%= f.label :about %>
+<%= f.text_field :about %> <br>
+
+<%= f.submit %>
+<% end%>
