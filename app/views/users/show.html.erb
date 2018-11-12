@@ -3,7 +3,7 @@
 <% if @user.dogs.length > 0 %>
 Dogs:
 <% @user.dogs.each do |dog|%>
-<li><%= dog.name %> </li>
+<li><%= link_to dog.name, dog %> </li>
 <% end %>
 <% end %>
 </ul>
