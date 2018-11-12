@@ -1,1 +1,9 @@
-<%= @user.username %>
+<%= @user.username %> <br>
+<ul>
+<% if @user.dogs.length > 0 %>
+Dogs:
+<% @user.dogs.each do |dog|%>
+<li><%= dog.name %> </li>
+<% end %>
+<% end %>
+</ul>
