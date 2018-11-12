@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_185947) do
     t.string "name"
     t.integer "age"
     t.string "breed"
+    t.string "gender"
     t.string "size"
     t.boolean "trained"
     t.bigint "user_id"

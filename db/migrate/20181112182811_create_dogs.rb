@@ -4,6 +4,7 @@ class CreateDogs < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :age
       t.string :breed
+      t.string :gender
       t.string :size
       t.boolean :trained
       t.belongs_to :user

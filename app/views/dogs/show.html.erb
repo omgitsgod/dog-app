@@ -1,8 +1,25 @@
 <ul>
-  <li>
-Name: <%= @dog.name %>
+
+<h1>Name: <%= @dog.name %></h1>
+
+<li>
+<h3>Owner: </h3> <%= @dog.user.name %>
 </li>
 <li>
-Owner: <%= @dog.user.name %>
+<h3>Age: </h3> <%= @dog.age %>
+</li>
+<li>
+<h3>Breed: </h3> <%= @dog.breed %>
+</li>
+<li>
+<h3>Gender: </h3> <%= @dog.gender %>
+</li>
+<li>
+<h3>Size: </h3> <%= @dog.size %>
+</li>
+<li>
+<h3>Trained: </h3> <%= @dog.trained %>
 </li>
 </ul>
+
+<%= link_to "Do you want to adopt me? :)", '/users' %>
