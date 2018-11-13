@@ -1,25 +1,20 @@
+<h1><%= @dog.name %></h1>
+
+<img src= <%= @dog.photos.first.large %> > <br>
+  <br> <br>
+
+  <%= @dog.description_sanitized %>
 <ul>
+<% @dog.breeds.each do |breed| %>
+<li>
+<%= breed %>
+</li>
+<% end %>
 
-<h1>Name: <%= @dog.name %></h1>
-
-<li>
-<h3>Owner: </h3> <%= @dog.user.name %>
-</li>
-<li>
-<h3>Age: </h3> <%= @dog.age %>
-</li>
-<li>
-<h3>Breed: </h3> <%= @dog.breed %>
-</li>
-<li>
-<h3>Gender: </h3> <%= @dog.gender %>
-</li>
-<li>
-<h3>Size: </h3> <%= @dog.size %>
-</li>
-<li>
-<h3>Trained: </h3> <%= @dog.trained %>
-</li>
 </ul>
 
 <%= link_to "Do you want to adopt me? :)", '/users' %>
+<br> <br> <br>
+<% @dog.photos.each do |photo| %>
+<img src= <%= photo.large %>> <br>
+<% end %>
