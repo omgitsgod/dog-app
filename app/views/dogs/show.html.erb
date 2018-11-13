@@ -1,9 +1,11 @@
 <h1><%= @dog.name %></h1>
-
 <img src= <%= @dog.photos.first.large %> > <br>
+<%= link_to "back to the pups", '/dogs' %> <br>
   <br> <br>
-
-  <%= @dog.description_sanitized %>
+  <b>Size:</b> <%= @dog.size %> <br>
+  <b>Age:</b> <%= @dog.age %> <br>
+  <b>Shelter:</b> <%= @dog.shelter_id %> <br>
+  <b>Breeds:</b>
 <ul>
 <% @dog.breeds.each do |breed| %>
 <li>
@@ -12,6 +14,10 @@
 <% end %>
 
 </ul>
+<br>
+
+  <b><%= @dog.description_sanitized %></b>
+<br><br>
 
 <%= link_to "Do you want to adopt me? :)", '/users' %>
 <br> <br> <br>

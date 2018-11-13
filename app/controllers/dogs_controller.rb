@@ -2,13 +2,14 @@ class DogsController < ApplicationController
 
   def index
     #@dogs = Dog.all
-    @dogs = $petfinder.find_pets('dog', '10005')
+    @zip = '10009'
+    @dogs = $petfinder.find_pets('dog', @zip)
 
   end
 
   def show
 
     @dog = $petfinder.pet(params[:id])
-byebug
+
   end
 end

@@ -1,13 +1,15 @@
 <p> Want to adopt a dog? </p>
 <ul>
   <br> <br>
-<% @dogs[0..20].each do |dog| %>
+<% @dogs.each do |dog| %>
 <img src= <%= dog.photos.first.medium%> > <br>
-<li><%= link_to dog.name, dog_path(dog.id) %> </li>
-<li>  <%= dog.sex %> </li>
-  <li> <%= dog.shelter_id %> </li>
-   Breeds: <br> <% dog.breeds.each do |breed| %>
+<h3><%= link_to dog.name, dog_path(dog.id) %> </h3>
+<li><b>Age:</b> <%= dog.age %> </li>
+<li><b>Sex:</b> <%= dog.sex %> </li>
+  <li><b> Breed(s):</b> <br> <% dog.breeds.each do |breed| %>
     <%= breed %> <br>
-    <% end %>
+    <% end %> </li>
+    <li><b>Shelter: </b> <%= dog.shelter_id %> </li>
+    <br>
 <% end %>
 </ul>
