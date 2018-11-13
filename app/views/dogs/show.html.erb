@@ -1,4 +1,4 @@
-<h1><%= @dog.name %></h1>
+<div id="showy"><h1><%= @dog.name %></h1>
 <img src= <%= @dog.photos.first.large %> > <br>
 <%= link_to "back to the pups", '/dogs' %> <br>
   <br> <br>
@@ -24,3 +24,4 @@
 <% @dog.photos.each do |photo| %>
 <img src= <%= photo.large %>> <br>
 <% end %>
+</div>
