@@ -5,5 +5,6 @@ resources :users
 resources :events
 resources :dogs
 resources :user_events
+resources :sessions
 
 end

@@ -4,6 +4,7 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 ruby '2.3.3'
 gem 'petfinder'
 gem 'wait', :git => 'git@github.com:foursquare/wait.git'
+gem "bcrypt", "~> 3.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

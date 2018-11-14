@@ -1,4 +1,4 @@
-<p> Want to adopt a dog? </p>
+<p> Want to adopt a dog?<%= User.find(session[:user_id]).location %> </p>
 <ul>
   <br> <br>
 <% @dogs.each do |dog| %>

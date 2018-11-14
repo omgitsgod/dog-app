@@ -4,12 +4,12 @@
 <%= f.label :username %>
 <%= f.text_field :username %> <br>
 <%= f.label :password %>
-<%= f.text_field :password %> <br>
+<%= f.password_field :password %> <br>
 <%= f.label :email %>
 <%= f.text_field :email %> <br>
 <%= f.label :name %>
 <%= f.text_field :name %> <br>
 <%= f.label :location %>
-<%= f.number_field :location %> <br>
-<%= f.submit %>
+<%= f.number_field :location, maxlength: 5 %> <br>
+<%= f.submit "sign up" %>
 <% end %>

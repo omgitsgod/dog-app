@@ -17,11 +17,13 @@ ActiveRecord::Schema.define(version: 2018_11_12_185947) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
-    t.string "breed"
-    t.string "gender"
+    t.string "age"
+    t.string "mix"
+    t.string "breeds", array: true
+    t.string "sex"
     t.string "size"
-    t.boolean "trained"
+    t.string "options", array: true
+    t.string "description_sanitized"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,10 +52,10 @@ ActiveRecord::Schema.define(version: 2018_11_12_185947) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.string "email"
     t.string "name"
-    t.integer "location"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
