@@ -26,7 +26,8 @@
 
 }
 
-.image {
+.dog_image {
+  border-radius: 0px;
   opacity: 1;
   display: block;
   width: auto;
@@ -59,16 +60,21 @@
   font-size: 13px;
   padding: 8px 16px;
 }
+
+.title {
+text-align: center;
+}
+
 </style>
 </head>
 <body>
-
-<h2>Fade in a Box</h2> <br> <br>
+<br>
+<div class="title"><h2>Choose Your Puppy!</h2> </div> <br> <br>
 <div class="container_container">
   <% @dogs.each do |dog| %>
 <div class="container">
 
-  <img src="<%= dog.photos.first.large %>" alt="Avatar" class="image" style="width:100%">
+  <img src="<%= dog.photos.first.large %>" alt="Avatar" class="dog_image" style="width:100%">
   <div class="middle">
     <div class="text">
       <%= link_to dog.name, dog_path(dog.id) %> <br>
