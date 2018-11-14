@@ -12,9 +12,9 @@
 
 .container_container > div {
   background-color: #f1f1f1;
-  width: 100px;
+  width: 200px;
   height: 50%;
-  margin: 10px;
+  margin: 30px;
   text-align: center;
   line-height: 100%;
   font-size: 30px;
@@ -23,13 +23,13 @@
 .container {
     position: relative;
 
-    flex-grow: 1;
+
 }
 
 .image {
   opacity: 1;
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -56,8 +56,8 @@
 .text {
   background-color: #4CAF50;
   color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+  font-size: 13px;
+  padding: 8px 16px;
 }
 </style>
 </head>
@@ -68,7 +68,7 @@
   <% @dogs.each do |dog| %>
 <div class="container">
 
-  <img src="<%= dog.photos.first.medium %>" alt="Avatar" class="image" style="width:100%">
+  <img src="<%= dog.photos.first.large %>" alt="Avatar" class="image" style="width:100%">
   <div class="middle">
     <div class="text">
       <%= link_to dog.name, dog_path(dog.id) %> <br>
