@@ -21,7 +21,7 @@ end
       name: Faker::Creature::Dog.name,
       age: Faker::Number.between(1, 20),
       sex: Faker::Creature::Dog.gender,
-      breeds: Faker::Dog.breed,
+      breeds: Faker::Creature::Dog.breed,
       size: Faker::Creature::Dog.size,
       user_id: Faker::Number.between(1, 10)
     )

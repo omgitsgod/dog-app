@@ -5,6 +5,10 @@ resources :users
 resources :events
 resources :dogs
 resources :user_events
-resources :sessions
+
+resources :sessions, only: [:new, :create]
+
+ delete "/sessions", to: "sessions#destroy", as: "session"
+
 
 end

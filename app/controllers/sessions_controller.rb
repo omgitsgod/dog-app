@@ -16,4 +16,9 @@ class SessionsController < ApplicationController
     redirect_to new_session_path
   end
   end
+
+  def destroy
+    log_out
+    redirect_to '/'
+  end
 end

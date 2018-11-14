@@ -2,7 +2,7 @@ class DogsController < ApplicationController
 
   def index
     #@dogs = Dog.all
-    @zip = User.find(session[:user_id]).location
+    @zip = User.find(session[:user_id]).location || '10009'
     @dogs = $petfinder.find_pets('dog', @zip)
 
   end

@@ -19,18 +19,14 @@
               Hey, <%= @user.username.upcase %>!
             <li>
             <li>
-              <%= form_with session_path, method: :delete, local: true do |f| %>
-                <%= f.submit "log out" %>
-              <% end %>
+              <%# <%= form_with session_path, method: :delete, local: true do |f| %> %>
+                <%# <%= f.submit "log out" %> %>
+              <%# <% end %> %>
             </li>
           <% else %>
             <%= link_to "Register", new_user_path %>
             <%= link_to "Log in", new_session_path %>
           <% end %>
-
-
-    </div>
-
 
    <br>
     <%= yield %>
