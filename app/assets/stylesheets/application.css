@@ -58,3 +58,8 @@ body {
   background-color: #88a289;
   color: white;
 }
+
+span {
+  position: fixed;
+  right: 0px;
+}
