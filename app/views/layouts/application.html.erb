@@ -17,9 +17,9 @@
       <% if @logged_in %>
             <li>
               Hey, <%= @user.username.upcase %>!
+            </li>
             <li>
-            <li>
-              <%= form_with session_path, method: :delete, local: true do |f| %>
+              <%= form_with url: session_path, method: :delete, local: true do |f| %>
                 <%= f.submit "log out" %>
               <% end %>
             </li>
