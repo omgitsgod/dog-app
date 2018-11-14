@@ -64,3 +64,9 @@ body {
 #nav_bar {
   right: 0px;
 }
+
+.indexy {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: stretch
+}

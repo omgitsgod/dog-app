@@ -3,10 +3,27 @@
 <head>
 <style>
 
+.container_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #5b6a5c;
+}
+
+.container_container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 50%;
+  margin: 10px;
+  text-align: center;
+  line-height: 100%;
+  font-size: 30px;
+}
 
 .container {
     position: relative;
-    width: 20%;
+
+    flex-grow: 1;
 }
 
 .image {
@@ -46,7 +63,8 @@
 </head>
 <body>
 
-<h2>Fade in a Box</h2>
+<h2>Fade in a Box</h2> <br> <br>
+<div class="container_container">
   <% @dogs.each do |dog| %>
 <div class="container">
 
@@ -59,8 +77,8 @@
       <%= dog.age %>
     </div>
   </div>
-
 </div>
 <% end %>
+</div>
 </body>
 </html>
