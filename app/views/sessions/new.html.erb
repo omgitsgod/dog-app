@@ -1,4 +1,6 @@
 <br><br> <br>
+<div>
+  <span class="actions">
 <%= form_with url: sessions_path, local: true do |f| %>
 <%= f.label :username %>
 <%= f.text_field :username, autocomplete: :off %> <br>
@@ -6,3 +8,5 @@
 <%= f.password_field :password %> <br>
 <%= f.submit %>
 <% end %>
+</span>
+</div>

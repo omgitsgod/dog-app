@@ -18,9 +18,7 @@ h1 {
   color: #561d1d;
 }
 
-body {
-  background-color: #ded1d1;
-}
+
 
 img {
       width: 50%;
@@ -30,9 +28,9 @@ img {
 }
 
 body {
+  background-color: #5b6a5c;
   margin: 0;
   font-family: "Whitney SSm A", "Whitney SSm B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
-
 }
 
 .topnav {
@@ -59,7 +57,10 @@ body {
   color: white;
 }
 
-span {
+ span {
   position: fixed;
+}
+
+#nav_bar {
   right: 0px;
 }

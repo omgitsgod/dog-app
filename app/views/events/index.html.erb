@@ -1,6 +1,8 @@
-<% @events.each do |event| %>
+<span>
+  <% @events.each do |event| %>
 <ul>
 <%= link_to event.name, event %>
 <li><%= event.address %></li>
 </ul>
 <% end %>
+</span>
