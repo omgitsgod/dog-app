@@ -4,7 +4,7 @@
 <style>
 .container {
     position: relative;
-    width: 50%;
+    width: 20%;
 }
 
 .image {
@@ -45,17 +45,21 @@
 <body>
 
 <h2>Fade in a Box</h2>
-
+  <% @dogs.each do |dog| %>
 <div class="container">
-  <img src="<%= @dog.photos.first.large %>" alt="Avatar" class="image" style="width:100%">
+
+  <img src="<%= dog.photos.first.medium %>" alt="Avatar" class="image" style="width:100%">
   <div class="middle">
     <div class="text">
       <%= link_to @dog.name, dog_path(@dog.id) %> <br>
       <hr>
+      <%= @dog.sex %> <br>
       <%= @dog.age %>
     </div>
   </div>
+
 </div>
+<% end %>
 
 </body>
 </html>

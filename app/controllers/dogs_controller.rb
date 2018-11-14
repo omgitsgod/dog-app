@@ -15,5 +15,6 @@ class DogsController < ApplicationController
 
   def edit
     @dog = $petfinder.pet(params[:id])
+    @dogs = $petfinder.find_pets('dog', '10009')
   end
 end
