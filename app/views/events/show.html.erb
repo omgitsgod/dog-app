@@ -3,9 +3,8 @@
   <ul>
 <li><%= @event.address %></li>
 <li><%= @event.about %></li>
+<br>
 
-<%= link_to "Edit event", edit_event_path  %>
-<%= link_to "Back to events", events_path  %>
-
-
+<%= link_to "<button>Back to events</button>".html_safe, events_path, :id => "button_id", :class => "btn btn-6 btn-6d" %> <br>
+<%= link_to "<button>Edit event</button>".html_safe, edit_event_path, :id => "button_id", :class => "btn btn-6 btn-6d" %>
 <ul>

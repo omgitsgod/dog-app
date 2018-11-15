@@ -133,3 +133,12 @@ text-align: center;
   display: grid;
   width: 20%;
 }
+
+.btn-6d {
+	border: 2px dashed #226fbe;
+}
+
+.btn-6d:hover {
+	background: transparent;
+	color: #226fbe;
+}
