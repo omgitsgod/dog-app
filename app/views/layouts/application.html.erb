@@ -9,7 +9,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
     <div class="topnav">
       <a class="active" href="/">Home</a>
       <a href="/dogs">Pups</a>
@@ -39,8 +38,10 @@
         <% end %>
       </ul>
       <% end %>
-</body>
+
+
+<div class="teal">
    <br>
     <%= yield %>
-
+</body>
 </html>
