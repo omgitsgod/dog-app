@@ -16,7 +16,7 @@
       <a href="/shelters">Shelters</a>
       <a href="/events">Events</a>
     <span id="nav_bar"> <% if @logged_in %>
-
+              <%= link_to "Inbox", conversations_path %>
               <%= link_to @user.username.upcase, edit_user_path(@user) %>
 
               <%= form_with url: session_path, method: :delete, local: true do |f| %>
