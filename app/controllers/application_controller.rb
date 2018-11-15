@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   $petfinder = Petfinder::Client.new('e05e0ebca38324e9ff774a7cddb57328', 'ab06379ed92612e2cf7d51faa1dbc43c')
-  
+
   before_action :set_ups
  private
 
@@ -32,4 +32,16 @@ class ApplicationController < ActionController::Base
   def authorized?(user_id)
     logged_in_user_id == user_id
   end
+
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+
+  def authenticate_user
+    if !current_user
+      redirect_to new_user_path, notice: "You must be signed in to do that!"
+    end
+  end
+
+  helper_method :current_user, :authenticate_user
 end

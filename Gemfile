@@ -5,6 +5,9 @@ ruby '2.3.3'
 gem 'petfinder'
 gem 'wait', :git => 'git@github.com:foursquare/wait.git'
 gem "bcrypt", "~> 3.1"
+gem 'jquery-rails'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

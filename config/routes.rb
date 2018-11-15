@@ -6,6 +6,9 @@ resources :events
 resources :dogs
 resources :user_events
 resources :shelters
+resources :conversations do
+  resources :messages
+ end
 
 resources :sessions, only: [:new, :create]
 
