@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   $petfinder = Petfinder::Client.new('e05e0ebca38324e9ff774a7cddb57328', 'ab06379ed92612e2cf7d51faa1dbc43c')
-  
+
   before_action :set_ups
+
  private
 
   def set_ups
@@ -10,6 +11,7 @@ class ApplicationController < ActionController::Base
     if logged_in?
       @user = User.find(logged_in_user_id)
     end
+    @errors = flash[:errors]
   end
 
   def log_in_user(user)

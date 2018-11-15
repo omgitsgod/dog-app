@@ -2,13 +2,10 @@
 .shelt_pet {
   width: 250px;
 }</style>
-<br><br>
-<%= @shelter.name %> <br>
-<%= @shelter.zip %>
-<br><br>
-Pups:
+
+
 <br>
-<div class="title"><h2><%= @shelter.name %></h2> </div> <br> <br>
+<div class="title"><h2><%= @shelter.name + " " + @shelter.zip %></h2> </div> <br> <br>
 <div class="container_container">
   <% @shelter_pets.each do |dog| %>
 <div class="container">
