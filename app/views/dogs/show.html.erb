@@ -29,7 +29,7 @@
 <%= f.submit  %>
 <% end %>
 <% end %>
-<%= link_to "Do you want to adopt me? Click Here!! :)", '/users' %>
+<%= mail_to @dog.contact.split.last, "Do you want to adopt me? Click Here!! :)" %> <br>
 <%=link_to "Click here to check out my shelter: #{@dog.shelter_id}", shelter_path(@dog.shelter_id) %> <br>
 <br> <br>
 </div>
