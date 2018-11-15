@@ -26,10 +26,10 @@
 <%= form_for @wishlist do |f| %>
 <%= f.hidden_field :user_id, value: @user.id %>
 <%= f.hidden_field :dog_id, value: @dog.id %>
-<%= f.submit  %>
+<%= f.submit "Add to wishlist!" %>
 <% end %>
 <% end %>
-<%= link_to "Do you want to adopt me? Click Here!! :)", '/users' %>
+<%= mail_to @dog.contact.split.last, "Do you want to adopt me? Click Here!! :)", html_options = {subject: "Name: #{@dog.name}  ID: #{@dog.id}",body: "Hello there! I was browsing around Maayan and Ryan's wonderful webapp and couldnt help but fall in love with your pup! Please make him mine?"} %> <br>
 <%=link_to "Click here to check out my shelter: #{@dog.shelter_id}", shelter_path(@dog.shelter_id) %> <br>
 <br> <br>
 </div>
