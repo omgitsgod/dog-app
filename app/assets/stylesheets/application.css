@@ -73,7 +73,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #5b6a5c;
+  background-color: #white;
 }
 
 .container_container > div {
