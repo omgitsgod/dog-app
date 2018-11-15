@@ -16,7 +16,7 @@
       <a href="/events">Events</a>
     <span id="nav_bar"> <% if @logged_in %>
               <%= link_to "Inbox", conversations_path %>
-              <%= link_to @user.username.upcase, settings_path %>
+              <%= link_to @user.username.downcase, settings_path %>
 
               <%= form_with url: session_path, method: :delete, local: true do |f| %>
                 <%= f.submit "log out" %>
