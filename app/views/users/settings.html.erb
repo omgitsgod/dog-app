@@ -1,0 +1,7 @@
+<%= link_to "Edit your profile!", edit_user_path(@user) %>
+<br><br><br>
+<h2>Puppy Wish List</h2>
+<% @user.wishlists.each do |wish| %>
+<%= $petfinder.pet(wish.dog_id).name %> <br>
+<%= link_to(image_tag($petfinder.pet(wish.dog_id).photos.first.large), dog_path(wish.dog_id)) %>
+<% end %>

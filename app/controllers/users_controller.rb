@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @users = User.all
   end
@@ -17,6 +16,7 @@ class UsersController < ApplicationController
     flash[:errors] = @user.errors.full_messages
     redirect_to new_user_path
   end
+end
 
   def show
     @user = User.find(params[:id])
@@ -35,7 +35,6 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  end
 
   def wishlist
     @user = User.find(session[:id])
@@ -46,6 +45,10 @@ class UsersController < ApplicationController
 
   def destroy
 
+  end
+
+  def settings
+    @user = User.find(session[:user_id])
   end
   private
 

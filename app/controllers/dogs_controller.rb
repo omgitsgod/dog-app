@@ -12,6 +12,7 @@ class DogsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     @wishlist = Wishlist.new
     @dog = $petfinder.pet(params[:id])
   end

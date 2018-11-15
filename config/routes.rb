@@ -13,6 +13,8 @@ resources :conversations do
 
 resources :sessions, only: [:new, :create]
 
+get "/users#settings", to: "users#settings", as: "settings"
+
  delete "/sessions", to: "sessions#destroy", as: "session"
 
 

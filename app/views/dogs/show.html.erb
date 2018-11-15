@@ -24,7 +24,7 @@
 <br><br>
 <% if session[:user_id] %>
 <%= form_for @wishlist do |f| %>
-<%= f.hidden_field :user, value: session[:user_id] %>
+<%= f.hidden_field :user_id, value: @user.id %>
 <%= f.hidden_field :dog_id, value: @dog.id %>
 <%= f.submit  %>
 <% end %>
