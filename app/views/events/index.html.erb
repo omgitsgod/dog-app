@@ -1,8 +1,12 @@
-<span>
+
   <% @events.each do |event| %>
 <ul>
 <%= link_to event.name, event %>
 <li><%= event.address %></li>
+<%= link_to "Delete", event, method: :delete, data: { confirm: "Really?" } %>
+
 </ul>
 <% end %>
 </span>
+
+<%= link_to "Create event", new_event_url %>

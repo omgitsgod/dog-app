@@ -4,7 +4,6 @@ class WishlistsController < ApplicationController
     if @wishlist.save
       redirect_to '/'
     else
-
       redirect_to events_path
     end
   end
