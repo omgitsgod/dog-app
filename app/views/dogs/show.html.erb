@@ -31,7 +31,7 @@
   <% @dog.photos.each do |photo| %>
 <div class="container">
 
-  <img src="<%= photo.large %>" alt="Avatar" class="dog_image" style="width:100%">
+  <a href="<%=photo.large %>" target="blank"> <img src="<%= photo.large %>"alt="Avatar" class="dog_image" style="width:100%"> </a>
 
 </div>
 <% end %>
