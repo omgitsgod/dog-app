@@ -1,0 +1,18 @@
+<style>
+
+</style>
+<br><br>
+<ul>
+<% @shelters.each do |shelter| %>
+<% center = [ shelter.latitude, shelter.longitude ].join(',') %>
+<li class="shelts"><%= link_to shelter.name, shelter_path(shelter.id) %></li>
+  <ul>
+    <li> <%= shelter.zip %> </li>
+    <li> <%= shelter.email %> </li>
+      <% if shelter.phone.length >0 %>
+      <li> <%= shelter.phone %> </li>
+      <% end %>
+  </ul>
+<% end %>
+
+</ul>

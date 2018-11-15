@@ -9,7 +9,6 @@ class DogsController < ApplicationController
   end
 
     @dogs = $petfinder.find_pets('dog', @zip)
-
   end
 
   def show

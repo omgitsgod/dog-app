@@ -5,6 +5,7 @@ resources :users
 resources :events
 resources :dogs
 resources :user_events
+resources :shelters
 
 resources :sessions, only: [:new, :create]
 

@@ -1,10 +1,13 @@
+<style>
+.hmm {
+  width: 700px;
+}
+</style>
 <div id="showy"><h1><%= @dog.name %></h1>
-<img src= <%= @dog.photos.first.large %> > <br>
-<%= link_to "back to the pups", '/dogs' %> <br>
+<div class="hmm"><img src= <%= @dog.photos.first.medium %> </div><br>
   <br> <br>
   <b>Size:</b> <%= @dog.size %> <br>
   <b>Age:</b> <%= @dog.age %> <br>
-  <b>Shelter:</b> <%= @dog.shelter_id %> <br>
   <b>Breeds:</b>
 <ul>
 <% @dog.breeds.each do |breed| %>
@@ -18,10 +21,18 @@
 
   <b><%= @dog.description_sanitized %></b>
 <br><br>
+<br><br>
+<%= link_to "Do you want to adopt me? Click Here!! :)", '/users' %>
+<%=link_to "Click here to check out my shelter: #{@dog.shelter_id}", shelter_path(@dog.shelter_id) %> <br>
+<br> <br>
+</div>
 
-<%= link_to "Do you want to adopt me? :)", '/users' %>
-<br> <br> <br>
-<% @dog.photos.each do |photo| %>
-<img src= <%= photo.large %>> <br>
+<div class="container_container">
+  <% @dog.photos.each do |photo| %>
+<div class="container">
+
+  <img src="<%= photo.large %>" alt="Avatar" class="dog_image" style="width:100%">
+
+</div>
 <% end %>
 </div>
