@@ -9,6 +9,7 @@ resources :shelters
 resources :conversations do
   resources :messages
  end
+ resources :wishlists
 
 resources :sessions, only: [:new, :create]
 

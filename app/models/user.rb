@@ -11,4 +11,8 @@ class User < ApplicationRecord
  def password=(plaintext_password)
    self.password_digest = BCrypt::Password.create(plaintext_password)
  end
+
+ def add_dogs(id)
+   self.wish_list << $petfinder.pet(id)
+ end
 end

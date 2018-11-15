@@ -12,9 +12,8 @@ class DogsController < ApplicationController
   end
 
   def show
-
+    @wishlist = Wishlist.new
     @dog = $petfinder.pet(params[:id])
-
   end
 
   def edit

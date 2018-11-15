@@ -22,6 +22,13 @@
   <b><%= @dog.description_sanitized %></b>
 <br><br>
 <br><br>
+<% if session[:user_id] %>
+<%= form_for @wishlist do |f| %>
+<%= f.hidden_field :user, value: session[:user_id] %>
+<%= f.hidden_field :dog_id, value: @dog.id %>
+<%= f.submit  %>
+<% end %>
+<% end %>
 <%= link_to "Do you want to adopt me? Click Here!! :)", '/users' %>
 <%=link_to "Click here to check out my shelter: #{@dog.shelter_id}", shelter_path(@dog.shelter_id) %> <br>
 <br> <br>

@@ -6,7 +6,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :name
       t.string :location
-      t.string :wish_list, array: true
 
       t.timestamps
     end
