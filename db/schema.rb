@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_151012) do
     t.string "email"
     t.string "name"
     t.string "location"
+    t.string "wish_list", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
