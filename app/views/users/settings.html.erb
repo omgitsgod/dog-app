@@ -1,10 +1,20 @@
 <button><%= link_to "Edit your profile!", edit_user_path(@user) %> </button>
 <br><br><br>
+<button><%= link_to "Add your pup", new_dog_path %> </button>
+<br><br><br>
 <%= form_with url: session_path, method: :delete, local: true do |f| %>
      <%= f.button "log out", id: "log_out" %>
     <% end %>
+<br><br>
+    Your Dog(s):
     <br>
-    <h2>Wishlist!</h2>
+    <ul>
+    <% @user.dogs.each do |dog| %>
+  <li>  <%= dog.name %> </li>
+    <% end %>
+  </ul
+    <br>
+    <h2>Wishlist: </h2>
     <br><br><br>
     <hr>
 <div class="container_container">

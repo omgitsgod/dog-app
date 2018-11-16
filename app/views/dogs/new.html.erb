@@ -1,0 +1,14 @@
+<%= form_for @dog do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :age %>
+<%= f.text_field :age %> <br>
+<%= f.label :sex %>
+<%= f.text_field :sex %> <br>
+<%= f.label :breeds %>
+<%= f.text_field :breeds %> <br>
+<%= f.label :size %>
+<%= f.text_field :size %> <br>
+<%= f.hidden_field :user_id, value: @user.id %>
+<%= f.submit %>
+<% end %>

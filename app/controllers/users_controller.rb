@@ -43,9 +43,7 @@ end
     redirect_to @dog
   end
 
-  def destroy
 
-  end
 
   def settings
     @user = User.find(session[:user_id])
