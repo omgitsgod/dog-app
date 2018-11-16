@@ -4,11 +4,17 @@
 
 <div class="ui segment">
   <% @messages.each do |message| %>
+  <br>
     <% if message.body %>
       <% user = User.find(message.user_id) %>
       <div class="item">
         <div class="content">
-          <div class="header"><strong><%= user.name %></strong> <%= message.message_time %></div>
+          <div class="header">
+            <% if user.name.length > 1 %>
+            <strong><%= user.name %></strong> <%= message.message_time %></div>
+            <% else %>
+            <strong><%= user.username %></strong> <%= message.message_time %></div>
+            <% end %>
           <div class="list">
             <div class="item">
               <i class="right triangle icon"></i>

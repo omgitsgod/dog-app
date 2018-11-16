@@ -18,8 +18,11 @@ h1 {
   color: #561d1d;
 }
 
-.log_out {
-  right: 0px;
+
+button {
+  height: 75px;
+  width: 100px;
+  padding: 5px;
 }
 
 img {
