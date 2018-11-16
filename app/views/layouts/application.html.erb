@@ -17,11 +17,7 @@
     <span id="nav_bar"> <% if @logged_in %>
               <%= link_to "Inbox", conversations_path %>
               <%= link_to @user.username.downcase, settings_path %>
-
-              <%= form_with url: session_path, method: :delete, local: true do |f| %>
-                <%= f.submit "log out" %>
-              <% end %>
-
+          
           <% else %>
             <%= link_to "Register", new_user_path %>
             <%= link_to "Log in", new_session_path %>

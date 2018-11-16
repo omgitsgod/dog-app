@@ -18,6 +18,10 @@ h1 {
   color: #561d1d;
 }
 
+.log_out {
+  right: 0px;
+}
+
 img {
       width: 50%;
       border-radius: 10px;
@@ -57,7 +61,7 @@ body {
 }
 
  span {
-  position: fixed;
+  position: absolute;
 }
 
 #nav_bar {
